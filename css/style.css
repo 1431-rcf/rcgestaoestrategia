@@ -116,3 +116,28 @@ h2{
     color:#0b1f3a;
     margin-bottom:15px;
 }
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+header .logo {
+    display: flex;
+    .logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
