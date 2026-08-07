@@ -789,6 +789,14 @@ class="logo-header">
 </a>
 
 <nav>
+    <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre a RC</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processos">Processos</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</nav>
 
 <ul>
 
@@ -797,7 +805,28 @@ class="logo-header">
 </li>
 
 <li>
-<a href="#sobre">Sobre</a>
+<section id="sobre" class="sobre">
+
+<h2>Sobre a RC Gestão & Estratégia</h2>
+
+<p>
+A RC Gestão & Estratégia nasceu com o propósito de ajudar empresas a
+organizar processos, reduzir custos e aumentar resultados através de uma
+gestão eficiente.
+</p>
+
+<p>
+Atuamos com experiência prática em Estoque, Compras, Logística,
+Inventário, Processos Operacionais e Desenvolvimento de Equipes,
+transformando desafios em oportunidades de crescimento.
+</p>
+
+<p>
+Nosso foco é oferecer soluções personalizadas para empresas que buscam
+mais controle, produtividade e estratégia.
+</p>
+
+</section>
 </li>
 
 <li>
@@ -851,8 +880,62 @@ Transformando
 <span>processos</span>
 em resultados.
 </h1>
+<section id="servicos">
 
+<h2>Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📦 Gestão de Estoque</h3>
 <p>
+Organização, controle, redução de perdas e melhoria da disponibilidade dos produtos.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🛒 Compras Estratégicas</h3>
+<p>
+Análise de fornecedores, negociação, redução de custos e planejamento de compras.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🚚 Logística</h3>
+<p>
+Melhoria dos processos logísticos, movimentação e eficiência operacional.
+</p>
+</div>
+
+
+<div class="card">
+<h3>📊 Inventário</h3>
+<p>
+Auditoria, ajustes de estoque e implantação de controles confiáveis.
+</p>
+</div>
+
+
+<div class="card">
+<h3>⚙️ Processos</h3>
+<p>
+Mapeamento e melhoria dos processos internos da empresa.
+</p>
+</div>
+
+
+<div class="card">
+<h3>👥 Treinamentos</h3>
+<p>
+Capacitação de equipes para melhores resultados e produtividade.
+</p>
+</div>
+
+</div>
+
+</section>
 A RC Gestão & Estratégia ajuda empresas a
 organizar processos, reduzir desperdícios,
 melhorar compras, controlar estoques,
@@ -1775,7 +1858,7 @@ href="https://wa.me/55119963890349"
 target="_blank"
 rel="noopener">
 
-(11) 99638-90349
+(11) 99638-0349
 
 </a>
 </p>
@@ -1833,3 +1916,49 @@ title="Falar no WhatsApp">
 </body>
 
 </html>
+nav {
+background:#0d1b2a;
+padding:15px;
+}
+
+nav ul {
+display:flex;
+justify-content:center;
+gap:30px;
+list-style:none;
+}
+
+nav a {
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+.sobre {
+padding:50px;
+text-align:center;
+background:#f5f5f5;
+}
+
+
+.cards {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:40px;
+}
+
+
+.card {
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px #0002;
+border-top:4px solid #c9a227;
+}
+
+
+.card h3 {
+color:#0d1b2a;
+}
