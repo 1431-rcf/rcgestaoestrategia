@@ -4,18 +4,758 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RC Gestão & Estratégia | Consultoria Empresarial</title>
 
-<meta name="description" content="Consultoria em Compras, Logística, Supply Chain, Gestão de Estoques, Inventários e Estratégia Empresarial.">
-<link rel="stylesheet" href="css/style.css">
+<meta name="description" content="RC Gestão & Estratégia - Consultoria empresarial especializada em compras, estoques, logística, processos, gestão, planejamento e desenvolvimento de equipes.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="author" content="Robson Costa Ferreira">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+/* =====================================================
+   CONFIGURAÇÕES
+===================================================== */
+
+:root {
+    --azul: #0757a6;
+    --azul-escuro: #062c55;
+    --azul-claro: #0d74d1;
+    --dourado: #d4a72c;
+    --dourado-claro: #f4d46f;
+    --branco: #ffffff;
+    --cinza: #f4f6f8;
+    --cinza-texto: #64748b;
+    --preto: #17202a;
+    --verde: #25d366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--preto);
+    background: var(--branco);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-symbol {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0757a6, #062c55);
+    border-bottom: 3px solid var(--dourado);
+    color: var(--dourado-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.logo-text strong {
+    display: block;
+    color: var(--azul);
+    font-size: 18px;
+}
+
+.logo-text small {
+    display: block;
+    color: #64748b;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--azul-escuro);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--azul);
+}
+
+.nav-button {
+    background: var(--azul);
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 7px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    background:
+        linear-gradient(110deg, rgba(3,31,61,.98), rgba(7,87,166,.94));
+    color: white;
+    padding: 105px 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    border-left: 4px solid var(--dourado);
+    padding-left: 14px;
+    color: var(--dourado-claro);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.08;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--dourado-claro);
+}
+
+.hero p {
+    color: #e5edf7;
+    font-size: 19px;
+    max-width: 680px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+.btn-primary:hover {
+    background: var(--dourado-claro);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.5);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--azul-escuro);
+}
+
+.hero-card {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 18px;
+    padding: 32px;
+}
+
+.hero-card h3 {
+    color: var(--dourado-claro);
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.hero-item {
+    display: flex;
+    gap: 14px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.hero-item:last-child {
+    border-bottom: none;
+}
+
+.hero-icon {
+    font-size: 25px;
+}
+
+/* =====================================================
+   NÚMEROS
+===================================================== */
+
+.numbers {
+    background: var(--dourado);
+    color: var(--azul-escuro);
+    padding: 30px 0;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.number strong {
+    display: block;
+    font-size: 30px;
+}
+
+.number span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: var(--dourado);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    color: var(--azul-escuro);
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--cinza-texto);
+}
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-box {
+    background: linear-gradient(135deg,#062c55,#0757a6);
+    color: white;
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.about-box h3 {
+    font-size: 29px;
+}
+
+.gold-line {
+    width: 70px;
+    height: 4px;
+    background: var(--dourado);
+    margin: 20px 0;
+}
+
+.about-text h2 {
+    color: var(--azul-escuro);
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+.highlight {
+    border-left: 4px solid var(--dourado);
+    padding-left: 18px;
+    color: var(--azul-escuro) !important;
+    font-weight: bold;
+}
+
+/* =====================================================
+   SERVIÇOS
+===================================================== */
+
+.services {
+    background: var(--cinza);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.09);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    background: #edf5fd;
+    color: var(--azul);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--cinza-texto);
+    font-size: 15px;
+}
+
+/* =====================================================
+   DIFERENCIAIS
+===================================================== */
+
+.differentials {
+    background: var(--azul-escuro);
+    color: white;
+}
+
+.differentials .section-title h2 {
+    color: white;
+}
+
+.differentials .section-title p {
+    color: #cbd5e1;
+}
+
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.diff-card {
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 10px;
+    background: rgba(255,255,255,.04);
+}
+
+.diff-card strong {
+    display: block;
+    color: var(--dourado-claro);
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.diff-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* =====================================================
+   TREINAMENTOS
+===================================================== */
+
+.training-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.training-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.training-card h3 {
+    color: var(--azul);
+    margin-bottom: 15px;
+}
+
+.training-card ul {
+    list-style: none;
+}
+
+.training-card li {
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.training-card li::before {
+    content: "✓";
+    color: var(--dourado);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* =====================================================
+   PROCESSO
+===================================================== */
+
+.process {
+    background: var(--cinza);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.process-step {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border-top: 4px solid var(--dourado);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    margin: auto auto 15px;
+    background: var(--azul);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.process-step h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+}
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+    background: linear-gradient(135deg,#0757a6,#062c55);
+    color: white;
+    text-align: center;
+    padding: 75px 0;
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: auto auto 30px;
+    color: #dbeafe;
+    font-size: 18px;
+}
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-box {
+    background: var(--cinza);
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.contact-box h3 {
+    color: var(--azul-escuro);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--azul);
+}
+
+.contact-item a {
+    color: var(--azul);
+    word-break: break-word;
+}
+
+.contact-action {
+    display: inline-block;
+    background: var(--verde);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #031a32;
+    color: #cbd5e1;
+    padding: 45px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    color: var(--dourado-claro);
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+}
+
+.footer-contact a {
+    color: var(--dourado-claro);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.gold {
+    color: var(--dourado-claro);
+}
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--verde);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    z-index: 2000;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media(max-width:950px) {
+
+    .hero-content,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .diff-grid,
+    .process-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .numbers-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+}
+
+@media(max-width:700px) {
+
+    nav {
+        display: none;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .services-grid,
+    .diff-grid,
+    .process-grid,
+    .training-grid,
+    .numbers-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -23,21 +763,66 @@
 <body>
 
 
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
 <header>
 
-<div class="container">
+<div class="container navbar">
 
 <a href="#inicio" class="logo">
-    <img src="imagens/logo.png" alt="RC Gestão & Estratégia">
+
+<div class="logo-symbol">
+RC
+</div>
+
+<div class="logo-text">
+
+<strong>
+RC Gestão & Estratégia
+</strong>
+
+<small>
+CONSULTORIA EMPRESARIAL
+</small>
+
+</div>
+
 </a>
 
 
 <nav>
 
+<ul>
+
+<li>
 <a href="#inicio">Início</a>
+</li>
+
+<li>
 <a href="#sobre">Sobre</a>
+</li>
+
+<li>
 <a href="#servicos">Serviços</a>
-<a href="#contato">Contato</a>
+</li>
+
+<li>
+<a href="#diferenciais">Diferenciais</a>
+</li>
+
+<li>
+<a href="#treinamentos">Treinamentos</a>
+</li>
+
+<li>
+<a href="#contato" class="nav-button">
+Fale Conosco
+</a>
+</li>
+
+</ul>
 
 </nav>
 
@@ -46,120 +831,538 @@
 </header>
 
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero" id="inicio">
 
-<div class="container">
-
-<div class="hero-text">
+<div class="container hero-content">
 
 
-<span>
-CONSULTORIA EMPRESARIAL
-</span>
+<div>
 
+<div class="hero-badge">
+Consultoria Empresarial
+</div>
 
 <h1>
-Transformando Processos em Resultados
+Transformando
+<span>Processos</span>
+em Resultados.
 </h1>
 
-
 <p>
-Soluções estratégicas em Compras, Logística, Estoques,
-Supply Chain e Desenvolvimento de Equipes.
+A RC Gestão & Estratégia ajuda empresas a organizar
+processos, reduzir custos, melhorar compras, controlar
+estoques, desenvolver equipes e aumentar seus resultados.
 </p>
 
 
-<a class="btn" href="https://wa.me/5538999999999">
+<div class="hero-buttons">
+
+<a href="#servicos" class="btn btn-primary">
+Conheça nossos serviços
+</a>
+
+<a href="https://wa.me/55119963890349?text=Ol%C3%A1!%20Vi%20o%20site%20da%20RC%20Gest%C3%A3o%20%26%20Estrat%C3%A9gia%20e%20gostaria%20de%20conhecer%20os%20servi%C3%A7os."
+target="_blank"
+rel="noopener"
+class="btn btn-outline">
+
 Solicitar Consultoria
+
 </a>
 
+</div>
 
 </div>
 
+
+<div class="hero-card">
+
+<h3>
+Nossa atuação
+</h3>
+
+
+<div class="hero-item">
+
+<div class="hero-icon">
+📦
+</div>
+
+<div>
+<strong>Compras & Suprimentos</strong>
+<br>
+Mais controle e melhores decisões.
+</div>
+
+</div>
+
+
+<div class="hero-item">
+
+<div class="hero-icon">
+📊
+</div>
+
+<div>
+<strong>Gestão & Indicadores</strong>
+<br>
+Dados para decisões mais inteligentes.
+</div>
+
+</div>
+
+
+<div class="hero-item">
+
+<div class="hero-icon">
+🚚
+</div>
+
+<div>
+<strong>Logística & Estoques</strong>
+<br>
+Organização e redução de perdas.
+</div>
+
+</div>
+
+
+<div class="hero-item">
+
+<div class="hero-icon">
+👥
+</div>
+
+<div>
+<strong>Desenvolvimento de Equipes</strong>
+<br>
+Pessoas preparadas para melhores resultados.
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
-  <section class="sobre" id="sobre">
+<!-- =====================================================
+     NÚMEROS
+===================================================== -->
+
+<section class="numbers">
+
+<div class="container numbers-grid">
+
+<div class="number">
+
+<strong>+16 mil</strong>
+
+<span>
+ITENS GERENCIADOS
+</span>
+
+</div>
+
+
+<div class="number">
+
+<strong>360°</strong>
+
+<span>
+VISÃO DO NEGÓCIO
+</span>
+
+</div>
+
+
+<div class="number">
+
+<strong>LEAN</strong>
+
+<span>
+FOCO EM MELHORIA CONTÍNUA
+</span>
+
+</div>
+
+
+<div class="number">
+
+<strong>RC</strong>
+
+<span>
+GESTÃO & ESTRATÉGIA
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE
+===================================================== -->
+
+<section class="section" id="sobre">
+
+<div class="container about-grid">
+
+
+<div class="about-box">
+
+<h3>
+RC Gestão & Estratégia
+</h3>
+
+<div class="gold-line"></div>
+
+<p>
+Estratégia, organização e gestão para empresas
+que desejam evoluir.
+</p>
+
+<br>
+
+<p>
+Nosso objetivo é transformar problemas operacionais
+em oportunidades de melhoria e crescimento.
+</p>
+
+</div>
+
+
+<div class="about-text">
+
+<div class="section-title"
+style="text-align:left;margin-bottom:10px;">
+
+<span>
+Quem Somos
+</span>
+
+</div>
+
+
+<h2>
+Gestão prática para desafios reais.
+</h2>
+
+
+<p>
+A RC Gestão & Estratégia nasceu com o propósito de
+transformar empresas por meio da organização,
+planejamento e melhoria contínua.
+</p>
+
+
+<p>
+Atuamos principalmente nas áreas de compras,
+estoques, logística, processos, indicadores,
+planejamento estratégico e desenvolvimento de equipes.
+</p>
+
+
+<p class="highlight">
+Nosso trabalho começa entendendo o problema,
+analisando os dados e construindo soluções
+práticas que possam ser aplicadas no dia a dia.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVIÇOS
+===================================================== -->
+
+<section class="section services" id="servicos">
 
 <div class="container">
 
-<h2>Quem Somos</h2>
+
+<div class="section-title">
+
+<span>
+Nossas soluções
+</span>
+
+<h2>
+Serviços
+</h2>
 
 <p>
-A <strong>RC Gestão & Estratégia</strong> nasceu com o propósito de ajudar empresas
-a organizarem seus processos, reduzirem custos e alcançarem melhores resultados.
+Soluções personalizadas de acordo com a realidade
+e os objetivos de cada empresa.
 </p>
 
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">📦</div>
+
+<h3>
+Compras & Suprimentos
+</h3>
+
 <p>
-Atuamos com experiência prática em Compras, Logística, Gestão de Estoques,
-Inventários, Supply Chain, Planejamento Estratégico e Treinamento de Equipes.
+Organização do processo de compras,
+análise de fornecedores, negociação,
+planejamento e redução de custos.
 </p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🏷️</div>
+
+<h3>
+Gestão de Estoques
+</h3>
+
+<p>
+Inventário, curva ABC, giro de estoque,
+produtos parados, acuracidade e
+redução de perdas.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🚚</div>
+
+<h3>
+Logística
+</h3>
+
+<p>
+Organização de processos logísticos,
+recebimento, armazenagem, expedição
+e movimentação de materiais.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">📊</div>
+
+<h3>
+Indicadores & Gestão
+</h3>
+
+<p>
+Construção de indicadores para acompanhar
+desempenho, produtividade, custos e
+resultados.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🎯</div>
+
+<h3>
+Planejamento Estratégico
+</h3>
+
+<p>
+Definição de objetivos, metas, planos de
+ação e acompanhamento dos resultados.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">⚙️</div>
+
+<h3>
+Processos & Lean
+</h3>
+
+<p>
+Identificação de desperdícios, padronização
+e melhoria contínua dos processos.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">👥</div>
+
+<h3>
+Gestão de Equipes
+</h3>
+
+<p>
+Desenvolvimento de equipes, organização
+de responsabilidades, comunicação e
+acompanhamento de desempenho.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">📋</div>
+
+<h3>
+Inventário & Auditoria
+</h3>
+
+<p>
+Diagnóstico de estoques, conferência,
+identificação de divergências e
+plano de correção.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">💡</div>
+
+<h3>
+Diagnóstico Empresarial
+</h3>
+
+<p>
+Análise dos principais processos da empresa
+para identificar gargalos, riscos e
+oportunidades de melhoria.
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
+<!-- =====================================================
+     DIFERENCIAIS
+===================================================== -->
 
-<section class="servicos" id="servicos">
+<section class="section differentials" id="diferenciais">
 
 <div class="container">
 
-<h2>Nossos Serviços</h2>
 
+<div class="section-title">
 
-<div class="cards">
+<span>
+Por que a RC?
+</span>
 
-
-<div class="card">
-
-<h3>📦 Gestão de Estoques</h3>
+<h2>
+Nossos Diferenciais
+</h2>
 
 <p>
-Organização, inventários, análise de giro e redução de perdas.
+Uma abordagem prática, próxima da operação
+e orientada para resultados.
 </p>
 
 </div>
 
 
+<div class="diff-grid">
 
-<div class="card">
 
-<h3>🛒 Compras Estratégicas</h3>
+<div class="diff-card">
+
+<strong>01</strong>
+
+<h3>
+Visão Prática
+</h3>
 
 <p>
-Melhoria de processos de compras, fornecedores e redução de custos.
+Soluções pensadas para a realidade
+operacional das empresas.
 </p>
 
 </div>
 
 
+<div class="diff-card">
 
-<div class="card">
+<strong>02</strong>
 
-<h3>🚚 Logística</h3>
+<h3>
+Foco em Resultado
+</h3>
 
 <p>
-Planejamento, processos operacionais e aumento de eficiência.
+Cada ação deve contribuir para melhorar
+processos e resultados.
 </p>
 
 </div>
 
 
+<div class="diff-card">
 
-<div class="card">
+<strong>03</strong>
 
-<h3>👥 Treinamento de Equipes</h3>
+<h3>
+Decisões com Dados
+</h3>
 
 <p>
-Desenvolvimento profissional e melhoria contínua dos colaboradores.
+Indicadores e informações para apoiar
+decisões mais seguras.
 </p>
 
 </div>
 
+
+<div class="diff-card">
+
+<strong>04</strong>
+
+<h3>
+Melhoria Contínua
+</h3>
+
+<p>
+Buscar sempre uma forma melhor,
+mais simples e eficiente de trabalhar.
+</p>
+
+</div>
 
 </div>
 
@@ -167,96 +1370,542 @@ Desenvolvimento profissional e melhoria contínua dos colaboradores.
 
 </section>
 
-  <section class="diferenciais">
+
+<!-- =====================================================
+     TREINAMENTOS
+===================================================== -->
+
+<section class="section" id="treinamentos">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<span>
+Capacitação
+</span>
+
+<h2>
+Treinamentos para Equipes
+</h2>
+
+<p>
+Desenvolvemos treinamentos alinhados às
+necessidades de cada operação.
+</p>
+
+</div>
+
+
+<div class="training-grid">
+
+
+<div class="training-card">
+
+<h3>
+📚 Gestão e Operações
+</h3>
+
+<ul>
+
+<li>
+Gestão de estoques
+</li>
+
+<li>
+Processos de compras
+</li>
+
+<li>
+Inventário e acuracidade
+</li>
+
+<li>
+Organização de almoxarifado
+</li>
+
+<li>
+Indicadores de desempenho
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="training-card">
+
+<h3>
+👥 Desenvolvimento de Equipes
+</h3>
+
+<ul>
+
+<li>
+Trabalho em equipe
+</li>
+
+<li>
+Comunicação profissional
+</li>
+
+<li>
+Organização e produtividade
+</li>
+
+<li>
+Liderança operacional
+</li>
+
+<li>
+Cultura de melhoria contínua
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESSO
+===================================================== -->
+
+<section class="section process">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<span>
+Como trabalhamos
+</span>
+
+<h2>
+Nosso Processo
+</h2>
+
+<p>
+Uma metodologia simples para transformar
+diagnóstico em ação.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-step">
+
+<div class="step-number">
+1
+</div>
+
+<h3>
+Diagnóstico
+</h3>
+
+<p>
+Entendemos a realidade atual,
+os problemas e os objetivos.
+</p>
+
+</div>
+
+
+<div class="process-step">
+
+<div class="step-number">
+2
+</div>
+
+<h3>
+Análise
+</h3>
+
+<p>
+Avaliamos processos, dados,
+indicadores e oportunidades.
+</p>
+
+</div>
+
+
+<div class="process-step">
+
+<div class="step-number">
+3
+</div>
+
+<h3>
+Plano de Ação
+</h3>
+
+<p>
+Construímos ações práticas,
+responsáveis e prioridades.
+</p>
+
+</div>
+
+
+<div class="process-step">
+
+<div class="step-number">
+4
+</div>
+
+<h3>
+Acompanhamento
+</h3>
+
+<p>
+Monitoramos os resultados e
+ajustamos o processo continuamente.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
 
 <div class="container">
 
 <h2>
-Por que escolher a RC?
+Sua empresa pode trabalhar melhor.
 </h2>
 
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>✔ Experiência Prática</h3>
-
 <p>
-Soluções baseadas em vivência real de processos empresariais.
+Vamos identificar oportunidades, organizar processos
+e construir soluções para melhorar seus resultados.
 </p>
 
-</div>
 
+<a
+href="https://wa.me/55119963890349?text=Ol%C3%A1!%20Vi%20o%20site%20da%20RC%20Gest%C3%A3o%20%26%20Estrat%C3%A9gia%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+target="_blank"
+rel="noopener"
+class="btn btn-primary">
 
-<div class="card">
+Falar com a RC
 
-<h3>✔ Redução de Custos</h3>
-
-<p>
-Estratégias para melhorar resultados e aumentar eficiência.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>✔ Melhoria Contínua</h3>
-
-<p>
-Aplicação de conceitos Lean e organização de processos.
-</p>
-
-</div>
-
-
-</div>
+</a>
 
 </div>
 
 </section>
 
 
+<!-- =====================================================
+     CONTATO
+===================================================== -->
 
-<section class="contato" id="contato">
+<section class="section contact" id="contato">
 
 <div class="container">
 
+
+<div class="section-title">
+
+<span>
+Vamos conversar
+</span>
+
 <h2>
-Vamos conversar?
+Entre em Contato
 </h2>
 
 <p>
-Entre em contato e descubra como podemos melhorar seus processos.
+Conte-nos sobre o desafio da sua empresa.
+A primeira conversa pode ser o início de uma transformação.
 </p>
 
+</div>
 
-<a class="btn" href="https://wa.me/5538999999999">
 
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+RC Gestão & Estratégia
+</h3>
+
+
+<div class="contact-item">
+
+<strong>
+Consultor
+</strong>
+
+<span>
+Robson Costa Ferreira
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
 WhatsApp
+</strong>
+
+<a
+href="https://wa.me/55119963890349"
+target="_blank"
+rel="noopener">
+
+(11) 99638-90349
 
 </a>
 
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+E-mail
+</strong>
+
+<a href="mailto:comercialrcgestão@gmail.com">
+
+comercialrcgestão@gmail.com
+
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+Região de atuação
+</strong>
+
+<span>
+Mirabela e região — Norte de Minas Gerais
+</span>
+
+</div>
+
+
+<a
+href="https://wa.me/55119963890349?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20uma%20consultoria."
+target="_blank"
+rel="noopener"
+class="contact-action">
+
+💬 Falar pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+Vamos conversar?
+</h3>
+
+<p>
+Estamos prontos para entender o seu cenário
+e avaliar como a RC Gestão & Estratégia pode
+ajudar sua empresa.
+</p>
+
+<br>
+
+<p>
+<strong>
+Atendimento personalizado para empresas.
+</strong>
+</p>
+
+<br>
+
+<p>
+📦 Compras e Suprimentos
+</p>
+
+<p>
+📊 Gestão e Indicadores
+</p>
+
+<p>
+🚚 Logística e Estoques
+</p>
+
+<p>
+👥 Treinamento de Equipes
+</p>
+
+<p>
+🎯 Estratégia e Processos
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-<div class="container">
+<div class="container footer-grid">
+
+
+<div>
+
+<h3>
+RC <span class="gold">Gestão & Estratégia</span>
+</h3>
 
 <p>
-© 2026 RC Gestão & Estratégia - Todos os direitos reservados.
+Transformando processos em resultados por meio
+de gestão, estratégia e melhoria contínua.
 </p>
+
+</div>
+
+
+<div>
+
+<h3>
+Serviços
+</h3>
+
+<ul class="footer-links">
+
+<li>
+<a href="#servicos">
+Compras
+</a>
+</li>
+
+<li>
+<a href="#servicos">
+Gestão de Estoques
+</a>
+</li>
+
+<li>
+<a href="#servicos">
+Logística
+</a>
+</li>
+
+<li>
+<a href="#servicos">
+Planejamento
+</a>
+</li>
+
+<li>
+<a href="#treinamentos">
+Treinamentos
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-contact">
+
+<h3>
+Contato
+</h3>
+
+<p>
+📱
+<a href="https://wa.me/55119963890349"
+target="_blank"
+rel="noopener">
+
+(11) 99638-90349
+
+</a>
+</p>
+
+<p>
+📧
+<a href="mailto:comercialrcgestão@gmail.com">
+
+comercialrcgestão@gmail.com
+
+</a>
+</p>
+
+<p>
+📍 Mirabela e região — MG
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="container copyright">
+
+© 2026 RC Gestão & Estratégia.
+Todos os direitos reservados.
+
+<br>
+
+<span class="gold">
+Robson Costa Ferreira
+</span>
 
 </div>
 
 </footer>
+
+
+<!-- =====================================================
+     BOTÃO WHATSAPP FLUTUANTE
+===================================================== -->
+
+<a
+href="https://wa.me/55119963890349?text=Ol%C3%A1!%20Vi%20o%20site%20da%20RC%20Gest%C3%A3o%20%26%20Estrat%C3%A9gia%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+target="_blank"
+rel="noopener"
+class="whatsapp"
+title="Falar com a RC pelo WhatsApp">
+
+💬
+
+</a>
 
 
 </body>
