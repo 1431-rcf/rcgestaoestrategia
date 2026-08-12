@@ -1,995 +1,652 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head><meta name="author" content="RC Gestão & Estratégia">
-
-<meta property="og:title" content="RC Gestão & Estratégia">
-
-<meta property="og:description" content="Soluções em Estoque, Compras, Logística, Inventário, Processos e Treinamentos.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url" content="https://www.rcgestaoestrategia.com.br">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RC Gestão & Estratégia | Consultoria em Estoque, Compras e Logística</title>
-
-<meta name="description" content="A RC Gestão & Estratégia oferece consultoria empresarial em Mirabela e região, especializada em gestão de estoque, compras, logística, inventário, processos e treinamento de equipes.">
-<meta name="keywords" content="consultoria Mirabela MG, gestão de estoque, compras estratégicas, logística, inventário, processos empresariais, treinamento de equipes, consultoria empresarial Norte de Minas">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-
-body{
-
-font-family:Arial, Helvetica, sans-serif;
-color:#222;
-background:#fff;
-
-}
-
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-
-
-/* MENU */
-
-nav{
-
-background:#0d1b2a;
-padding:18px;
-position:sticky;
-top:0;
-z-index:1000;
-
-}
-
-
-nav ul{
-
-display:flex;
-justify-content:center;
-gap:30px;
-list-style:none;
-flex-wrap:wrap;
-
-}
-
-
-nav a{
-
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-
-}
-
-
-nav a:hover{
-
-color:#c9a227;
-
-}
-
-
-
-/* CABEÇALHO */
-
-.hero{
-
-background:linear-gradient(135deg,#0d1b2a,#243b55);
-color:white;
-text-align:center;
-padding:60px 20px;
-
-}
-
-
-.logo{
-
-width:190px;
-max-width:90%;
-margin-bottom:20px;
-
-}
-
-
-.hero h1{
-
-font-size:42px;
-color:#c9a227;
-margin-bottom:20px;
-
-}
-
-
-.hero h2{
-
-font-size:20px;
-font-weight:normal;
-line-height:1.6;
-max-width:900px;
-margin:auto;
-
-}
-
-
-.hero p{
-
-font-size:18px;
-margin-top:15px;
-
-}
-
-
-
-/* BOTÕES */
-
-.btn{
-
-display:inline-block;
-background:#c9a227;
-color:#fff;
-padding:15px 35px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-margin-top:25px;
-
-}
-
-
-.btn:hover{
-
-background:#a88618;
-
-}
-
-
-
-/* TITULOS */
-
-section h2{
-
-font-size:32px;
-color:#0d1b2a;
-margin-bottom:30px;
-
-}
-
-
-
-/* SOBRE */
-
-.sobre{
-
-padding:60px 20px;
-text-align:center;
-background:#f5f5f5;
-
-}
-
-
-.sobre p{
-
-max-width:900px;
-margin:15px auto;
-font-size:18px;
-line-height:1.7;
-
-}
-
-
-
-/* SERVIÇOS */
-
-#servicos{
-
-padding:60px 20px;
-text-align:center;
-
-}
-
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto;
-
-}
-
-
-.card{
-
-background:#fff;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px #0002;
-border-top:5px solid #c9a227;
-
-}
-
-
-.card h3{
-
-color:#0d1b2a;
-margin-bottom:15px;
-
-}
-
-
-.card p{
-
-line-height:1.5;
-
-}
- 
-/* DIAGNÓSTICO */
-
-.diagnostico{
-
-background:#c9a227;
-padding:60px 20px;
-text-align:center;
-color:#0d1b2a;
-
-}
-
-
-.diagnostico h2{
-
-color:#0d1b2a;
-
-}
-
-
-.diagnostico p{
-
-max-width:850px;
-margin:15px auto;
-font-size:18px;
-line-height:1.6;
-
-}
-
-
-
-/* RESULTADOS */
-
-.resultados{
-
-background:#f5f5f5;
-padding:60px 20px;
-text-align:center;
-
-}
-
-
-
-/* PROCESSOS */
-
-.processos{
-
-padding:60px 20px;
-text-align:center;
-
-}
-
-
-
-.processos .card{
-
-border-top:5px solid #0d1b2a;
-
-}
-
-
-.processos h3{
-
-color:#c9a227;
-
-}
-
-
-
-/* CASES */
-
-.cases{
-
-background:#0d1b2a;
-color:white;
-padding:60px 20px;
-text-align:center;
-
-}
-
-
-.cases h2{
-
-color:#c9a227;
-
-}
-
-
-.cases p{
-
-max-width:900px;
-margin:15px auto;
-font-size:18px;
-line-height:1.7;
-
-}
-
-
-
-/* DIFERENCIAIS */
-
-.diferenciais{
-
-padding:60px 20px;
-text-align:center;
-
-}
-
-
-
-/* CONTATO */
-
-#contato{
-
-background:#0d1b2a;
-color:white;
-padding:60px 20px;
-text-align:center;
-
-}
-
-
-#contato h2{
-
-color:#c9a227;
-
-}
-
-
-#contato p{
-
-font-size:18px;
-margin:12px;
-
-}
-
-
-
-/* RODAPÉ */
-
-footer{
-
-background:#050b12;
-color:white;
-text-align:center;
-padding:25px;
-
-}
-
-
-
-/* WHATSAPP */
-
-.whatsapp{
-
-position:fixed;
-right:25px;
-bottom:25px;
-background:#25d366;
-color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 5px 15px #0005;
-z-index:999;
-
-}
-
-
-</style>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RC Gestão & Estratégia | Consultoria em Estoque, Compras e Logística</title>
+
+  <meta name="author" content="RC Gestão & Estratégia">
+  <meta name="description" content="A RC Gestão & Estratégia oferece consultoria empresarial em Mirabela e região, especializada em gestão de estoque, compras, logística, inventário, processos e treinamento de equipes.">
+  <meta name="keywords" content="consultoria Mirabela MG, gestão de estoque, compras estratégicas, logística, inventário, processos empresariais, treinamento de equipes, consultoria empresarial Norte de Minas">
+
+  <meta property="og:title" content="RC Gestão & Estratégia">
+  <meta property="og:description" content="Soluções em Estoque, Compras, Logística, Inventário, Processos e Treinamentos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rcgestaoestrategia.com.br">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    nav {
+      background: #0d1b2a;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,.18);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #c9a227;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d1b2a, #243b55);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .logo {
+      width: 190px;
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #c9a227;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c9a227;
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 25px;
+      transition: .2s;
+      border: 2px solid #c9a227;
+    }
+
+    .btn:hover {
+      background: #a88618;
+      border-color: #a88618;
+      transform: translateY(-2px);
+    }
+
+    section h2 {
+      font-size: 32px;
+      color: #0d1b2a;
+      margin-bottom: 30px;
+    }
+
+    .sobre {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f5f5f5;
+    }
+
+    .sobre p {
+      max-width: 900px;
+      margin: 15px auto;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    #servicos {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px #0002;
+      border-top: 5px solid #c9a227;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px #0003;
+    }
+
+    .card h3 {
+      color: #0d1b2a;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      line-height: 1.5;
+    }
+
+    .diagnostico {
+      background: #c9a227;
+      padding: 60px 20px;
+      text-align: center;
+      color: #0d1b2a;
+    }
+
+    .diagnostico h2 {
+      color: #0d1b2a;
+    }
+
+    .diagnostico p {
+      max-width: 850px;
+      margin: 15px auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .diagnostico .btn {
+      background: #0d1b2a;
+      border-color: #0d1b2a;
+    }
+
+    .diagnostico .btn:hover {
+      background: #243b55;
+      border-color: #243b55;
+    }
+
+    .resultados {
+      background: #f5f5f5;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .processos {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .processos .card {
+      border-top: 5px solid #0d1b2a;
+    }
+
+    .processos h3 {
+      color: #c9a227;
+    }
+
+    .cases {
+      background: #0d1b2a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cases h2 {
+      color: #c9a227;
+    }
+
+    .cases p {
+      max-width: 900px;
+      margin: 15px auto;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .diferenciais {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #contato {
+      background: #0d1b2a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #contato h2 {
+      color: #c9a227;
+    }
+
+    #contato p {
+      font-size: 18px;
+      margin: 12px;
+    }
+
+    #contato a.email {
+      color: white;
+      text-decoration: none;
+    }
+
+    #contato a.email:hover {
+      color: #c9a227;
+    }
+
+    .social-title {
+      margin-top: 40px;
+      color: #c9a227;
+      font-size: 24px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      padding: 14px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0d1b2a;
+      background: #fff;
+      border: 2px solid #c9a227;
+      transition: .2s;
+    }
+
+    .social-btn:hover {
+      background: #c9a227;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #050b12;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    .footer-social {
+      margin-top: 14px;
+    }
+
+    .footer-social a {
+      color: #c9a227;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 8px;
+    }
+
+    .footer-social a:hover {
+      color: #fff;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px #0005;
+      z-index: 999;
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 45px 18px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero h2 {
+        font-size: 17px;
+      }
+
+      section h2 {
+        font-size: 27px;
+      }
+
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
-
-<!-- MENU -->
-
-<nav>
-
-<ul>
-
-<li><a href="#inicio">Início</a></li>
-
-<li><a href="#sobre">Sobre a RC</a></li>
-
-<li><a href="#servicos">Serviços</a></li>
-
-<li><a href="#diagnostico">Diagnóstico</a></li>
-
-<li><a href="#contato">Contato</a></li>
-
-</ul>
-
-</nav>
-
-
-
-<!-- INÍCIO -->
-
-<section id="inicio" class="hero">
-
-
-<img src="imagens/logo.png" 
-alt="RC Gestão & Estratégia"
-class="logo">
-
-
-<h1>
-RC Gestão & Estratégia
-</h1>
-
-
-<h2>
-Estoque • Compras • Logística • Inventário • Processos • Estratégia • Treinamentos
-</h2>
-
-
-<p>
-📍 Mirabela e região
-</p>
-
-
-<p>
-📱 (11) 99638-0349
-</p>
-
-
-<a href="https://wa.me/5511996380349" class="btn">
-
-💬 Falar no WhatsApp
-
-</a>
-
-
-</section>
-
-
-
-<!-- SOBRE -->
-
-<section id="sobre" class="sobre">
-
-
-<h2>
-Sobre a RC Gestão & Estratégia
-</h2>
-
-
-<p>
-A RC Gestão & Estratégia auxilia empresas na organização,
-controle e melhoria dos seus processos internos.
-</p>
-
-
-<p>
-Com experiência prática em Estoque, Compras, Logística,
-Inventário e Gestão Operacional, buscamos transformar desafios
-em resultados.
-</p>
-
-
-<p>
-Nossa missão é entregar soluções simples, eficientes e estratégicas
-para empresas que desejam crescer com organização.
-
-</p>
-
-
-</section>
-
-
-
-<!-- SERVIÇOS -->
-
-
-<section id="servicos">
-
-
-<h2>
-Nossos Serviços
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>📦 Gestão de Estoque</h3>
-
-<p>
-Organização, controle, redução de perdas e maior confiabilidade dos dados.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>🛒 Compras Estratégicas</h3>
-
-<p>
-Negociação, fornecedores, planejamento e redução de custos.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>🚚 Logística</h3>
-
-<p>
-Melhoria dos processos e aumento da eficiência operacional.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>📊 Inventário</h3>
-
-<p>
-Auditoria, ajustes e implantação de controles confiáveis.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>⚙️ Processos</h3>
-
-<p>
-Mapeamento e melhoria dos processos internos.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>👥 Treinamentos</h3>
-
-<p>
-Desenvolvimento de equipes e melhoria da produtividade.
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<!-- DIAGNÓSTICO -->
-
-<section id="diagnostico" class="diagnostico">
-
-
-<h2>
-🔎 Diagnóstico Empresarial Gratuito
-</h2>
-
-
-<p>
-Sua empresa possui dificuldades com estoque, compras,
-processos ou logística?
-</p>
-
-
-<p>
-Realizamos uma análise inicial para identificar oportunidades
-de melhoria, redução de perdas e aumento de eficiência.
-</p>
-
-
-<a href="https://wa.me/5511996380349" class="btn">
-
-Solicitar Diagnóstico
-
-</a>
-
-
-</section>
-
-<!-- RESULTADOS -->
-
-<section class="resultados">
-
-
-<h2>
-Resultados que a RC pode gerar
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-📉 Redução de Custos
-</h3>
-
-<p>
-Identificação de desperdícios, melhorias de processos e oportunidades de economia.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-📦 Estoque Organizado
-</h3>
-
-<p>
-Maior controle dos produtos, redução de perdas e informações mais confiáveis.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-⚡ Mais Produtividade
-</h3>
-
-<p>
-Processos definidos para melhorar o desempenho das equipes.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-📈 Gestão Estratégica
-</h3>
-
-<p>
-Decisões baseadas em informações e indicadores do negócio.
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- COMO FUNCIONA -->
-
-
-<section class="processos">
-
-
-<h2>
-Como funciona a Consultoria RC
-</h2>
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-<h3>
-01 - Diagnóstico
-</h3>
-
-<p>
-Entendemos a realidade atual da empresa, identificando desafios,
-gargalos e oportunidades.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-02 - Planejamento
-</h3>
-
-<p>
-Criamos um plano de ação personalizado conforme a necessidade
-do negócio.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-03 - Implementação
-</h3>
-
-<p>
-Aplicamos melhorias em estoque, compras, logística e processos.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-04 - Acompanhamento
-</h3>
-
-<p>
-Acompanhamos os resultados e ajustamos as estratégias
-para evolução contínua.
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- EXPERIÊNCIA / CASES -->
-
-
-<section class="cases">
-
-
-<h2>
-Experiência e Cases
-</h2>
-
-
-<p>
-A RC Gestão & Estratégia possui experiência prática em operações
-empresariais, atuando com desafios reais de estoque, compras,
-logística e processos.
-</p>
-
-
-<p>
-Projetos envolvendo organização de estoque, melhoria de controles,
-análise de fornecedores, redução de perdas e desenvolvimento
-de equipes fazem parte da nossa metodologia.
-</p>
-
-
-<p>
-Nosso diferencial é unir conhecimento técnico com experiência
-vivida dentro da operação.
-</p>
-
-
-</section>
-
-
-
-
-
-<!-- DIFERENCIAIS -->
-
-
-<section class="diferenciais">
-
-
-<h2>
-Por que escolher a RC?
-</h2>
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-<h3>
-✅ Experiência Prática
-</h3>
-
-<p>
-Soluções baseadas na realidade do dia a dia das empresas.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-✅ Visão Estratégica
-</h3>
-
-<p>
-Análise dos processos buscando eficiência e crescimento.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-✅ Soluções Personalizadas
-</h3>
-
-<p>
-Cada empresa recebe uma estratégia adequada à sua necessidade.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-✅ Foco em Resultado
-</h3>
-
-<p>
-Organização, redução de custos e melhoria contínua.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-<!-- CONTATO -->
-
-<section id="contato">
-
-
-<h2>
-Solicitar Consultoria
-</h2>
-
-
-<p>
-Sua empresa pode alcançar mais controle, organização e resultados.
-</p>
-
-
-<p>
-📱 WhatsApp: (11) 99638-0349
-</p>
-
-
-<p>
-✉️ comercialrcgestao@gmail.com
-</p>
-
-
-<a href="https://wa.me/5511996380349" class="btn">
-
-💬 Falar pelo WhatsApp
-
-</a>
-
-
-</section>
-
-
-
-
-
-<!-- RODAPÉ -->
-
-
-<footer>
-
-
-<p>
-© 2026 RC Gestão & Estratégia.
-</p>
-
-
-<p>
-Todos os direitos reservados.
-</p>
-
-
-<p>
-Estoque • Compras • Logística • Inventário • Processos • Estratégia • Treinamentos
-</p>
-
-
-</footer>
-
-
-
-
-
-<!-- BOTÃO WHATSAPP FLUTUANTE -->
-
-
-<a href="https://wa.me/5511996380349"
-class="whatsapp"
-target="_blank">
-
-💬
-
-</a>
-
-
-
+  <!-- MENU -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre a RC</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#diagnostico">Diagnóstico</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- INÍCIO -->
+  <section id="inicio" class="hero">
+    <img src="imagens/logo.png" alt="RC Gestão & Estratégia" class="logo">
+
+    <h1>RC Gestão & Estratégia</h1>
+
+    <h2>
+      Estoque • Compras • Logística • Inventário • Processos • Estratégia • Treinamentos
+    </h2>
+
+    <p>📍 Mirabela e região</p>
+    <p>📱 (11) 99638-0349</p>
+
+    <a href="https://wa.me/5511996380349" class="btn" target="_blank" rel="noopener noreferrer">
+      💬 Falar no WhatsApp
+    </a>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre a RC Gestão & Estratégia</h2>
+
+    <p>
+      A RC Gestão & Estratégia auxilia empresas na organização,
+      controle e melhoria dos seus processos internos.
+    </p>
+
+    <p>
+      Com experiência prática em Estoque, Compras, Logística,
+      Inventário e Gestão Operacional, buscamos transformar desafios
+      em resultados.
+    </p>
+
+    <p>
+      Nossa missão é entregar soluções simples, eficientes e estratégicas
+      para empresas que desejam crescer com organização.
+    </p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📦 Gestão de Estoque</h3>
+        <p>Organização, controle, redução de perdas e maior confiabilidade dos dados.</p>
+      </div>
+
+      <div class="card">
+        <h3>🛒 Compras Estratégicas</h3>
+        <p>Negociação, fornecedores, planejamento e redução de custos.</p>
+      </div>
+
+      <div class="card">
+        <h3>🚚 Logística</h3>
+        <p>Melhoria dos processos e aumento da eficiência operacional.</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Inventário</h3>
+        <p>Auditoria, ajustes e implantação de controles confiáveis.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Processos</h3>
+        <p>Mapeamento e melhoria dos processos internos.</p>
+      </div>
+
+      <div class="card">
+        <h3>👥 Treinamentos</h3>
+        <p>Desenvolvimento de equipes e melhoria da produtividade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNÓSTICO -->
+  <section id="diagnostico" class="diagnostico">
+    <h2>🔎 Diagnóstico Empresarial Gratuito</h2>
+
+    <p>
+      Sua empresa possui dificuldades com estoque, compras,
+      processos ou logística?
+    </p>
+
+    <p>
+      Realizamos uma análise inicial para identificar oportunidades
+      de melhoria, redução de perdas e aumento de eficiência.
+    </p>
+
+    <a href="https://wa.me/5511996380349" class="btn" target="_blank" rel="noopener noreferrer">
+      Solicitar Diagnóstico
+    </a>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="resultados">
+    <h2>Resultados que a RC pode gerar</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📉 Redução de Custos</h3>
+        <p>Identificação de desperdícios, melhorias de processos e oportunidades de economia.</p>
+      </div>
+
+      <div class="card">
+        <h3>📦 Estoque Organizado</h3>
+        <p>Maior controle dos produtos, redução de perdas e informações mais confiáveis.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚡ Mais Produtividade</h3>
+        <p>Processos definidos para melhorar o desempenho das equipes.</p>
+      </div>
+
+      <div class="card">
+        <h3>📈 Gestão Estratégica</h3>
+        <p>Decisões baseadas em informações e indicadores do negócio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="processos">
+    <h2>Como funciona a Consultoria RC</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>01 - Diagnóstico</h3>
+        <p>Entendemos a realidade atual da empresa, identificando desafios, gargalos e oportunidades.</p>
+      </div>
+
+      <div class="card">
+        <h3>02 - Planejamento</h3>
+        <p>Criamos um plano de ação personalizado conforme a necessidade do negócio.</p>
+      </div>
+
+      <div class="card">
+        <h3>03 - Implementação</h3>
+        <p>Aplicamos melhorias em estoque, compras, logística e processos.</p>
+      </div>
+
+      <div class="card">
+        <h3>04 - Acompanhamento</h3>
+        <p>Acompanhamos os resultados e ajustamos as estratégias para evolução contínua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA / CASES -->
+  <section class="cases">
+    <h2>Experiência e Cases</h2>
+
+    <p>
+      A RC Gestão & Estratégia possui experiência prática em operações
+      empresariais, atuando com desafios reais de estoque, compras,
+      logística e processos.
+    </p>
+
+    <p>
+      Projetos envolvendo organização de estoque, melhoria de controles,
+      análise de fornecedores, redução de perdas e desenvolvimento
+      de equipes fazem parte da nossa metodologia.
+    </p>
+
+    <p>
+      Nosso diferencial é unir conhecimento técnico com experiência
+      vivida dentro da operação.
+    </p>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="diferenciais">
+    <h2>Por que escolher a RC?</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>✅ Experiência Prática</h3>
+        <p>Soluções baseadas na realidade do dia a dia das empresas.</p>
+      </div>
+
+      <div class="card">
+        <h3>✅ Visão Estratégica</h3>
+        <p>Análise dos processos buscando eficiência e crescimento.</p>
+      </div>
+
+      <div class="card">
+        <h3>✅ Soluções Personalizadas</h3>
+        <p>Cada empresa recebe uma estratégia adequada à sua necessidade.</p>
+      </div>
+
+      <div class="card">
+        <h3>✅ Foco em Resultado</h3>
+        <p>Organização, redução de custos e melhoria contínua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Solicitar Consultoria</h2>
+
+    <p>Sua empresa pode alcançar mais controle, organização e resultados.</p>
+    <p>📱 WhatsApp: (11) 99638-0349</p>
+    <p>✉️ <a class="email" href="mailto:comercialrcgestao@gmail.com">comercialrcgestao@gmail.com</a></p>
+
+    <a href="https://wa.me/5511996380349" class="btn" target="_blank" rel="noopener noreferrer">
+      💬 Falar pelo WhatsApp
+    </a>
+
+    <h3 class="social-title">Siga a RC nas redes sociais</h3>
+
+    <div class="social-links">
+      <a
+        href="https://www.instagram.com/comercialrcgestao/"
+        class="social-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram da RC Gestão & Estratégia">
+        📸 Instagram
+      </a>
+
+      <a
+        href="https://www.linkedin.com/company/140043964/"
+        class="social-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn da RC Gestão & Estratégia">
+        💼 LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2026 RC Gestão & Estratégia.</p>
+    <p>Todos os direitos reservados.</p>
+    <p>Estoque • Compras • Logística • Inventário • Processos • Estratégia • Treinamentos</p>
+
+    <div class="footer-social">
+      <a href="https://www.instagram.com/comercialrcgestao/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <span>•</span>
+      <a href="https://www.linkedin.com/company/140043964/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP FLUTUANTE -->
+  <a
+    href="https://wa.me/5511996380349"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a RC pelo WhatsApp">
+    💬
+  </a>
 
 </body>
-
 </html>
